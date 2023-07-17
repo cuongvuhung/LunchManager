@@ -1,7 +1,12 @@
-﻿namespace LunchManager.DTO
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace LunchManager.DTO
 {
+    [Table("Feedbacks")]
     public class Feedback
     {
+        [Key]
         public int Id { get; set; }
         public int RegistrationId { get; set; }
         public string Description { get; set; }
@@ -12,6 +17,10 @@
             RegistrationId = registrationId;
             Description = description;
             Rate = rate;
+        }
+
+        public Feedback()
+        {
         }
     }
 }

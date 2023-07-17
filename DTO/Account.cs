@@ -1,7 +1,12 @@
-﻿namespace LunchManager.DTO
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace LunchManager.DTO
 {
+    [Table("Accounts")]
     public class Account
     {
+        [Key]
         public int Id { get; set; }
         public string Name { get; set; }
         public int DepartmentID { get; set; }
@@ -13,6 +18,10 @@
             Name = name;
             DepartmentID = departmentID;
             Password = password;
+        }
+
+        public Account()
+        {
         }
     }
 }

@@ -1,7 +1,12 @@
-﻿namespace LunchManager.DTO
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace LunchManager.DTO
 {
+    [Table("MenuFoods")]
     public class MenuFood
     {
+        [Key]
         public int Id { get; set; }
         public int FoodId { get; set; }
         public int MenuId { get; set; }
@@ -12,5 +17,10 @@
             FoodId = foodId;
             MenuId = menuId;
         }
+
+        public MenuFood()
+        {
+        }
+
     }
 }

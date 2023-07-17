@@ -1,16 +1,26 @@
-﻿namespace LunchManager.DTO
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace LunchManager.DTO
 {
+    [Table("AccountRoles")]
     public class AccountRole
     {
+        [Key]
         public int Id { get; set; }
-        public int AcountId { get; set; }
+        public int AccountId { get; set; }
         public int RoleId { get; set; }
 
-        public AccountRole(int id, int acountId, int roleId)
+        public AccountRole(int id, int accountid, int roleid)
         {
             Id = id;
-            AcountId = acountId;
-            RoleId = roleId;
+            AccountId = accountid;
+            RoleId = roleid;
         }
+
+        public AccountRole()
+        {
+        }
+
     }
 }
