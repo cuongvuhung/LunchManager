@@ -13,7 +13,7 @@ namespace LunchManager.Models
         public DatabaseConfig()
         {
             string dataSource = "Data Source = 10.36.0.36;";
-            string catalog = "Initial Catalog = Cuongvh-LunchManager;";
+            string catalog = "Initial Catalog = LunchManager;";
             string user = "User ID = cuongvt;";
             string password = "Password = Abcd@12345;";
             string secure = "TrustServerCertificate=True;";

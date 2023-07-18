@@ -37,8 +37,8 @@ namespace LunchManager.Controllers
                         select Config).FirstOrDefault();
             if (item != null)
             {
-                item.Key = obj.Key;
-                item.Value = obj.Value;
+                item.Ke = obj.Ke;
+                item.Val = obj.Val;
             }
             else { return 0; }
             return context.SaveChanges();

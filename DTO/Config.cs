@@ -8,14 +8,14 @@ namespace LunchManager.DTO
     {
         [Key]
         public int Id { get; set; }
-        public string Key1 { get; set; }
-        public string Value { get; set; }
+        public string Ke { get; set; }
+        public string Val { get; set; }
 
-        public Config(int id, string key1, string value)
+        public Config(int id, string ke, string val)
         {
             Id = id;
-            Key1 = key1;
-            Value = value;
+            Ke = ke;
+            Val = val;
         }
 
         public Config()

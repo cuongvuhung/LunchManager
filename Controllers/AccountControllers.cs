@@ -56,7 +56,8 @@ namespace LunchManager.Controllers
                 context.Accounts.Remove(item);
             }
             else { return 0; }
-            return context.SaveChanges();
+            context.SaveChanges();
+            return 1;
 
         }
     }
